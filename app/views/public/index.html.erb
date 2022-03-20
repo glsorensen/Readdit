@@ -34,11 +34,9 @@
       <p class="h5">Trending Communities</p>
       <div class="card">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">An active item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
+          <% @communities.each do |community| %>
+            <li class="list-group-item"><%= link_to community.name, community, class: "nav-link" %></li>
+          <% end %>
         </ul>
       </div>
 
